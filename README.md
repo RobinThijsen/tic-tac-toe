@@ -6,6 +6,7 @@ Here is a little project actually not end completly.\
 You can play Tic Tac Toe with a bot with a realy low level...
 
 ### To win all time, this is the pattern :
+*You are X*
 
 * | X | _ | _ |
   |---|---|---|

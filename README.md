@@ -2,8 +2,8 @@
 
 ## informations about
 
-Here is a little project actually not end completly.\
-You can play Tic Tac Toe with a bot with a realy low level...
+Here is a little project actually **not end** completly.\
+You can play Tic Tac Toe with a bot with a **really low level**...
 
 ### To win all time, this is the pattern :
 *You are X*
@@ -43,21 +43,19 @@ You can play Tic Tac Toe with a bot with a realy low level...
   | X | X | X |
   | 0 | _ | 0 |
 
-## WIN
-
-and you win the game ;)\
+and you **win** the game ;)\
 *probably more way to win*
 
-The CPU check all the way you can win and block you but you can make multiple way to win, he gonna struggle.\
-The app store the game plate every new moove so refreshing the page won't gonna restart the game.\
+The CPU check all the way you can win and **block** you but you can make **multiple way** to win, he gonna **struggle**.\
+The app **store** the game plate every new move so refreshing the page won't gonna **restart** the game.\
 Button refresh actually work, refeshing the game plate and the data locally stored.\
-*You can refresh your stays.*
+*You can refresh your stats.*
 
 ## resources
 
 * html
 * css
-* javascript
+* javascript **(vanilla)**
 * fontawesome
 * google fonts
 
@@ -70,9 +68,11 @@ Button refresh actually work, refeshing the game plate and the data locally stor
 ## coming soon
 
 * can play with other people on same device
-* multipe level of CPU
-* light-mode add
+* **multipe level of CPU**
+* **light-mode add**
+  
+*legends : bold mean coming soon*
 
 ## link of project (netlify)
 
-link of the project [here](https://main--gregarious-swan-5501ce.netlify.app/)
+link of the **project** [here](https://main--gregarious-swan-5501ce.netlify.app/)

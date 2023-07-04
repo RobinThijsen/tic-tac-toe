@@ -8,15 +8,21 @@ You can play Tic Tac Toe with a bot with a realy low level...
 ### To win all time, this is the pattern :
 
 * | X |   |   |
+  -------------
   |   |   |   |
-  |   |   |   |
-
-* | X | 0 |   |
-  |   |   |   |
+  -------------
   |   |   |   |
 
 * | X | 0 |   |
+  -------------
+  |   |   |   |
+  -------------
+  |   |   |   |
+
+* | X | 0 |   |
+  -------------
   |   | X |   |
+  -------------
   |   |   |   |
 
 * | X | 0 |   |

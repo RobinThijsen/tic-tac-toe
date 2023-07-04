@@ -1,6 +1,6 @@
 # Tic Tac Toe Games
 
-## informations about
+* ## informations about
 
 Here is a little project actually **not end** completly.\
 You can play Tic Tac Toe with a bot with a **really low level**...
@@ -51,7 +51,7 @@ The app **store** the game plate every new move so refreshing the page won't gon
 Button refresh actually work, refeshing the game plate and the data locally stored.\
 *You can refresh your stats.*
 
-## resources
+* ## resources
 
 * html
 * css
@@ -59,13 +59,13 @@ Button refresh actually work, refeshing the game plate and the data locally stor
 * fontawesome
 * google fonts
 
-## fonctionality
+* ## fonctionality
 
 * can play with a CPU low level
 * can see stats of player
 * can change is name
 
-## coming soon
+* ## coming soon
 
 * can play with other people on same device
 * **multipe level of CPU**
@@ -73,6 +73,6 @@ Button refresh actually work, refeshing the game plate and the data locally stor
   
 *legends : bold mean coming soon*
 
-## link of project (netlify)
+* ## link of project (netlify)
 
 link of the **project** [here](https://main--gregarious-swan-5501ce.netlify.app/)

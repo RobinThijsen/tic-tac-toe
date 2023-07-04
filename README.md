@@ -10,7 +10,6 @@ You can play Tic Tac Toe with a bot with a realy low level...
 * | X |   |   |
   |---|---|---|
   |   |   |   |
-  |---|---|---|
   |   |   |   |
 
 * | X | 0 |   |

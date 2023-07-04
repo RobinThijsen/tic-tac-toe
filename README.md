@@ -1,28 +1,84 @@
-# 7 to 1 folder
+# Tic Tac Toe Games
 
-## Here is a folder with the basics of a 7 to 1 folder
+## informations about
 
-### List of the files already on the folder
+Here is a little project actually not end completly.
+You can play Tic Tac Toe with a bot with a realy low level...
 
-* 7to1
-  * bases
-    * _fonts.scss
-    * _resets.scss
-  * component
-    * _button.scss
-  * layout
-    * _header.scss
-    * _footer.scss
-  * pages
-    * _index.scss
-  * themes
-  * utils
-    * _mixins.scss
-    * _variables.scss
-  * vendors
-  * style.css
-  * style.map.css
-  * style.scss
+To win all time, this is the pattern :
 
-The files are for some of theme, empty. And for the others, with a little of code write.
-Just download the folder and add, modify and/or delete as mush files as you want.
+* | X |   |   |
+  |---|---|---|
+  |   |   |   |
+  |---|---|---|
+  |   |   |   |
+
+* | X | 0 |   |
+  |---|---|---|
+  |   |   |   |
+  |---|---|---|
+  |   |   |   |
+
+* | X | 0 |   |
+  |---|---|---|
+  |   | X |   |
+  |---|---|---|
+  |   |   |   |
+
+* | X | 0 |   |
+  |---|---|---|
+  |   | X |   |
+  |---|---|---|
+  |   |   | 0 |
+
+* | X | 0 |   |
+  |---|---|---|
+  | X | X |   |
+  |---|---|---|
+  |   |   | 0 |
+
+* | X | 0 |   |
+  |---|---|---|
+  | X | X |   |
+  |---|---|---|
+  | 0 |   | 0 |
+
+* | X | 0 |   |
+  |---|---|---|
+  | X | X | X |
+  |---|---|---|
+  | 0 |   | 0 |
+
+## WIN
+
+and you win the game ;)
+*probably more way to win*
+
+The CPU check all the way you can win and block you but you can make multiple way to win, he gonna struggle.
+The app store the game plate every new moove so refreshing the page won't gonna restart the game.
+Button refresh actually work, refeshing the game plate and the data locally stored.
+*You can refresh your stays.*
+
+## resources
+
+* html
+* css
+* javascript
+* fontawesome
+* google fonts
+
+## fonctionality
+
+* can play with a CPU low level
+* can see stats of player
+* can change is name
+
+## coming soon
+
+* can play with other people on same device
+* multipe level of CPU
+* light-mode add
+
+## link of project (netlify)
+
+!()[]

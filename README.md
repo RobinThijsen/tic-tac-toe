@@ -74,4 +74,4 @@ Button refresh actually work, refeshing the game plate and the data locally stor
 
 ## link of project (netlify)
 
-link of the project [here]()
+link of the project [here](https://main--gregarious-swan-5501ce.netlify.app/)

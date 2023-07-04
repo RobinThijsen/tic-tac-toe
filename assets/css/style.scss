@@ -7,12 +7,12 @@
 // import vendors
 
 // import pages
-@import "pages/index";
+@import "pages/_all", "pages/_home", "pages/_game", "pages/_info";
 
 // import layout
-@import "layout/_header", "layout/_footer";
+@import "layout/_header";
 
 // import component
-@import "component/_button";
+@import "component/_blueButton", "component/_orangeButton";
 
 // import themes

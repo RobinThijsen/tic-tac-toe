@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<a href="/info.html">
+				<i class="fa-solid fa-chart-simple"></i>
+			</a>
+			<h1>
+				<span>Tic</span>
+				<span>Tac</span>
+				<span>Toe</span>
+			</h1>
+			<button id="reset">
+				<i class="fa-solid fa-arrow-rotate-right"></i>
+			</button>
+		</header>
+		<main class="game">
+			<section id="game-plate"></section>
+			<section>
+				<article id="your-win">
+					<p></p>
+					<p></p>
+				</article>
+				<article id="tie">
+					<p></p>
+					<p></p>
+				</article>
+				<article id="cpu-win">
+					<p></p>
+					<p></p>
+				</article>
+			</section>
+		</main>
+		<section class="win-container">
+			<h3></h3>
+			<h1></h1>
+			<div>
+				<button id="quit" type="submit">quit</button>
+				<button id="next" type="submit">next round</button>
+			</div>
+		</section>
+		<script type="module" src="/assets/js/game.js"></script>
+	</body>
+</html>

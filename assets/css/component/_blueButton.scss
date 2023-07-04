@@ -1,0 +1,15 @@
+a.blue-button {
+	padding: 1em 2em;
+	border-radius: 5px;
+	background: $cyan;
+	color: $darkest-blue-green;
+	box-shadow: 0 10px 0 $dark-cyan;
+	transition: $transition-a-3;
+	text-transform: uppercase;
+	font-weight: 900;
+	
+	&:active {
+		box-shadow: none;
+		transform: translateY(10px);
+	}
+}

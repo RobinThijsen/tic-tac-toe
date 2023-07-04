@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:not(i) {
+  font-family: "Roboto", sans-serif;
+}
+
+input, button, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0;
+  /*
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+em, i {
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background: hsl(197, 57%, 14%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+  gap: 2vh;
+  position: relative;
+}
+body section.win-container {
+  position: absolute;
+  width: 100%;
+  z-index: 2200;
+  background: hsl(197, 61%, 16%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  padding: 3vh 0;
+}
+body section.win-container.active {
+  display: flex;
+}
+body section.win-container h3 {
+  text-transform: uppercase;
+  color: #C1C1C1;
+  font-weight: 600;
+}
+body section.win-container h1 {
+  font-size: 2rem;
+  color: #58E0E9;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+body section.win-container h1 span.cross, body section.win-container h1 span.cross::before {
+  width: 40px;
+  height: 10px;
+  background: #58E0E9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section.win-container h1 span.cross {
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+body section.win-container h1 span.cross::before {
+  content: "";
+  position: absolute;
+  transform: rotate(-90deg);
+}
+body section.win-container h1 span.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: transparent;
+  border: 20px solid #58E0E9;
+  transition: all 0.3s ease;
+  position: relative;
+}
+body section.win-container div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+body section.win-container div button {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: hsl(197, 57%, 14%);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+body section.win-container div button:nth-child(1) {
+  background: #C1C1C1;
+  box-shadow: 0 5px 0 #929292;
+}
+body section.win-container div button:nth-child(2) {
+  background: #E5B842;
+  box-shadow: 0 5px 0 #d1ab44;
+}
+body section.win-container div button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+body.opacity-05::before {
+  content: "";
+  position: absolute;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.3);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 60%;
+  }
+}
+main.home section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+}
+main.home section:first-child {
+  background: hsl(197, 61%, 16%);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 hsla(0, 0%, 0%, 0.5);
+}
+main.home section:first-child h2 {
+  color: #58E0E9;
+  text-transform: uppercase;
+}
+main.home section:first-child > div {
+  width: 100%;
+  height: 70px;
+  background: hsl(197, 57%, 14%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main.home section:first-child > div div.indicator {
+  width: 45%;
+  height: 80%;
+  border-radius: 5px;
+  background: #58E0E9;
+  position: absolute;
+  left: 1%;
+  transition: all 0.3s ease;
+}
+main.home section:first-child > div div.indicator.active {
+  left: 55%;
+}
+main.home section:first-child > div div.marks-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main.home section:first-child > div div.marks-container span.cross, main.home section:first-child > div div.marks-container span.cross::before {
+  width: 40px;
+  height: 10px;
+  background: hsl(197, 57%, 14%);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.home section:first-child > div div.marks-container span.cross {
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+main.home section:first-child > div div.marks-container span.cross::before {
+  content: "";
+  position: absolute;
+  transform: rotate(-90deg);
+}
+main.home section:first-child > div div.marks-container span.cross.active, main.home section:first-child > div div.marks-container span.cross.active::before {
+  background: #58E0E9;
+}
+main.home section:first-child > div div.marks-container span.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: transparent;
+  border: 10px solid #58E0E9;
+  transition: all 0.3s ease;
+  position: relative;
+}
+main.home section:first-child > div div.marks-container span.circle.active {
+  border-color: hsl(197, 57%, 14%);
+}
+main.home section:first-child p {
+  color: #C1C1C1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+main.home section a {
+  width: 100%;
+  text-align: center;
+}
+
+main.game section#game-plate {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5vw;
+}
+main.game section#game-plate div.case {
+  aspect-ratio: 1/1;
+  background: hsl(197, 61%, 16%);
+  border-radius: 5px;
+  box-shadow: 0 5px 0 hsla(0, 0%, 0%, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main.game section#game-plate div.case span.cross, main.game section#game-plate div.case span.cross::before {
+  width: 70px;
+  height: 20px;
+  background: #58E0E9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.game section#game-plate div.case span.cross {
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+main.game section#game-plate div.case span.cross::before {
+  content: "";
+  position: absolute;
+  transform: rotate(-90deg);
+}
+main.game section#game-plate div.case span.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: transparent;
+  border: 20px solid #E5B842;
+  transition: all 0.3s ease;
+  position: relative;
+}
+main.game section#game-plate div.case.active {
+  background: #58E0E9;
+  box-shadow: 0 5px 0 #34b1ba;
+}
+main.game section#game-plate div.case.active span.cross, main.game section#game-plate div.case.active span.cross::before {
+  background: hsl(197, 57%, 14%);
+}
+main.game section#game-plate div.case.active span.circle {
+  border-color: hsl(197, 57%, 14%);
+}
+main.game section:nth-child(2) {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main.info section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  border-radius: 5px;
+  background: hsl(197, 61%, 16%);
+  box-shadow: 0 10px 0 hsla(0, 0%, 0%, 0.3);
+  padding: 4vh 0;
+}
+main.info section article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+main.info section article h1 {
+  color: #58E0E9;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+main.info section article div.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+main.info section article div.stats p {
+  color: #C1C1C1;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+main.info section article div.stats p:nth-child(1) em {
+  color: #58E0E9;
+}
+main.info section article div.stats p:nth-child(2) em {
+  color: #C1C1C1;
+}
+main.info section article div.stats p:nth-child(3) em {
+  color: #E5B842;
+}
+main.info section article input {
+  width: 90%;
+  border-radius: 5px;
+  background: hsl(197, 57%, 14%);
+  padding: 0.5em;
+  text-transform: uppercase;
+  color: #58E0E9;
+  font-weight: 700;
+  font-size: 1.3rem;
+  box-shadow: 0 5px 0 hsla(0, 0%, 0%, 0.3);
+  transition: all 0.3s ease;
+}
+main.info section article input:focus {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+main.info section article button {
+  font-size: 1.2rem;
+  color: hsl(197, 57%, 14%);
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  background: #58E0E9;
+  box-shadow: 0 5px 0 #34b1ba;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+main.info section article button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a, header button {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background: #58E0E9;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 #34b1ba;
+  transition: all 0.3s ease;
+  font-size: 1.8rem;
+  color: hsl(197, 57%, 14%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+header a:active, header button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: hsl(198, 48%, 90%);
+}
+header h1 span::first-letter {
+  color: #E5B842;
+}
+header h1 span:nth-child(2)::first-letter {
+  color: #58E0E9;
+}
+
+a.blue-button {
+  padding: 1em 2em;
+  border-radius: 5px;
+  background: #58E0E9;
+  color: hsl(197, 57%, 14%);
+  box-shadow: 0 10px 0 #34b1ba;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+a.blue-button:active {
+  box-shadow: none;
+  transform: translateY(10px);
+}
+
+a.orange-button {
+  padding: 1em 2em;
+  border-radius: 5px;
+  background: #C1C1C1;
+  color: hsl(197, 57%, 14%);
+  box-shadow: 0 10px 0 #929292;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+a.orange-button:active {
+  box-shadow: none;
+  transform: translateY(10px);
+}
+
+/*# sourceMappingURL=style.css.map */

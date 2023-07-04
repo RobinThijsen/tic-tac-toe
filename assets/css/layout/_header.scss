@@ -1,0 +1,42 @@
+header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	a, button {
+		width: 50px;
+		aspect-ratio: 1/1;
+		background: $cyan;
+		border-radius: 5px;
+		box-shadow: 0 5px 0 $dark-cyan;
+		transition: $transition-a-3;
+		font-size: 1.8rem;
+		color: $darkest-blue-green;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		
+		&:active {
+			box-shadow: none;
+			transform: translateY(5px);
+		}
+	}
+	
+	h1 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		color: $white;
+		
+		span::first-letter {
+			color: $orange;
+		}
+		
+		span:nth-child(2)::first-letter {
+			color: $cyan;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<a href="/info.html">
+				<i class="fa-solid fa-chart-simple"></i>
+			</a>
+			<h1>
+				<span>Tic</span>
+				<span>Tac</span>
+				<span>Toe</span>
+			</h1>
+			<span></span>
+		</header>
+		<main class="home">
+			<section>
+				<h2>pick player's 1 marks</h2>
+				<div>
+					<div class="indicator"></div>
+					<div id="cross" class="marks-container">
+						<span class="cross"></span>
+					</div>
+					<div id="circle" class="marks-container">
+						<span class="circle"></span>
+					</div>
+				</div>
+				<p>remember - x goes first</p>
+			</section>
+			<section>
+				<a class="blue-button" href="/game.html?v=cpu">new game (vs cpu)</a>
+				<a class="orange-button" href="#">new game (vs player)</a>
+			</section>
+		</main>
+		<script type="module" src="/assets/js/firstLoad.js"></script>
+		<script type="module" src="/assets/js/marksSelect.js"></script>
+	</body>
+</html>

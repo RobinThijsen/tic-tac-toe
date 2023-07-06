@@ -539,6 +539,7 @@ export const checkIfTie = (object) => {
  *
  */
 export const addSectionEnd = (text, playerMark, other) => {
+	document.body.classList.add("opacity-05")
 	const sectionWin = document.querySelector(".win-container")
 	sectionWin.classList.add('active')
 	const h3 = sectionWin.querySelector("h3")

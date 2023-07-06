@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2em;
+  padding: 0 3em;
   gap: 2vh;
   position: relative;
 }
@@ -73,6 +73,8 @@ body section.win-container h1 {
   font-weight: 700;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 2vh;
 }
 body section.win-container h1 span.cross, body section.win-container h1 span.cross::before {
@@ -315,6 +317,10 @@ main.game section:nth-child(2) {
   main.game section#game-plate {
     gap: 2rem;
   }
+  main.game section#game-plate div.case span.cross, main.game section#game-plate div.case span.cross::before {
+    width: 6vw;
+    height: 1.7vw;
+  }
 }
 @keyframes error {
   0% {
@@ -509,7 +515,7 @@ a.orange-button.not-active {
   box-shadow: 0 10px 0 #929292;
 }
 a.orange-button.none {
-  transform: translateX(90vw);
+  transform: translateX(110vw);
 }
 a.orange-button:active {
   box-shadow: none;

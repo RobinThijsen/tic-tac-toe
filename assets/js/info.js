@@ -1,5 +1,5 @@
-const dataCPU = JSON.parse(localStorage.getItem('data-cpu'))
-const dataPVP = JSON.parse(localStorage.getItem('data-pvp'))
+let dataCPU = JSON.parse(localStorage.getItem('data-cpu'))
+let dataPVP = JSON.parse(localStorage.getItem('data-pvp'))
 const userNameLocal = localStorage.getItem('userName')
 let userName = localStorage.getItem('userName')
 
@@ -62,11 +62,14 @@ changeButton.onclick = () => {
  * reset user dataCPU
  */
 deleteButton.onclick = () => {
-	data.win = 0
-	data.tie = 0
-	data.loose = 0
-	localStorage.setItem('dataCPU', JSON.stringify(data))
-	localStorage.setItem('dataPVP', JSON.stringify(data))
+	dataCPU = {
+		win: 0,
+		tie: 0,
+		loose: 0
+	}
+	
+	localStorage.setItem('dataCPU', JSON.stringify(dataCPU))
+	localStorage.setItem('dataPVP', JSON.stringify(dataCPU))
 	
 	userName = "GUEST_"
 	

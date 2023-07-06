@@ -11,7 +11,7 @@ const checkAll = (dataType = "data-cpu") => {
 	if (checkIfWin(object, cases, playerMark)) {
 		
 		addSectionEnd('you won!', playerMark, other)
-		const data = JSON.parse(localStorage.getItem(dataType))
+		let data = JSON.parse(localStorage.getItem(dataType))
 		data.win++
 		localStorage.setItem(dataType, JSON.stringify(data))
 		return true
@@ -20,7 +20,7 @@ const checkAll = (dataType = "data-cpu") => {
 		
 		addSectionEnd('cpu won!', playerMark, other)
 		
-		const data = JSON.parse(localStorage.getItem(dataType))
+		let data = JSON.parse(localStorage.getItem(dataType))
 		data.loose++
 		localStorage.setItem(dataType, JSON.stringify(data))
 		return true
@@ -29,7 +29,7 @@ const checkAll = (dataType = "data-cpu") => {
 		
 		addSectionEnd("it's a tie", playerMark, other)
 		
-		const data = JSON.parse(localStorage.getItem(dataType))
+		let data = JSON.parse(localStorage.getItem(dataType))
 		data.tie++
 		localStorage.setItem(dataType, JSON.stringify(data))
 		return true
@@ -134,18 +134,23 @@ if (value == 'cpu') {
 	for (let i = 0; i < cases.length; i++) {
 		
 		cases[i].onclick = () => {
-			if (playInt % 2 === 0) {
-				object.game[i] = playerMark
-				addMarks(cases[i], playerMark)
-			} else {
-				object.game[i] = other
-				addMarks(cases[i], other)
-			}
-			if (checkAll("data-pvp")) {
-				console.log("win/loose/tie")
-			}
 			
+			if (object.game[i] == false) {
+				if (playInt % 2 === 0) {
+					object.game[i] = playerMark
+					addMarks(cases[i], playerMark)
+				} else {
+					object.game[i] = other
+					addMarks(cases[i], other)
+				}
+				if (checkAll("data-pvp")) {
+					console.log("win/loose/tie")
+				}
+			} else {
+				cases[i].classList.add("error")
+			}
 			localStorage.setItem('game', JSON.stringify(object))
+			setTimeout(removeClass, 200, cases[i])
 			playInt++
 		}
 	}
@@ -176,3 +181,5 @@ nextButton.onclick = () => {
 	localStorage.removeItem('game')
 	location.reload()
 }
+// active css :active pseudo-element on mobile
+document.addEventListener("touchstart", function() {},false);

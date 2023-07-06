@@ -87,6 +87,14 @@ main.game {
 			
 			&#game-plate {
 				gap: 2rem;
+				
+				div.case {
+					
+					span.cross, span.cross::before {
+						width: 6vw;
+						height: 1.7vw;
+					}
+				} 
 			}
 		}
 	}

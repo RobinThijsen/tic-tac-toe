@@ -101,11 +101,11 @@ if (value == 'cpu') {
 						
 						checkAll()
 					}
+					localStorage.setItem('game', JSON.stringify(object))
 				} else {
 					cases[i].classList.add("error")
 				}
 				
-				localStorage.setItem('game', JSON.stringify(object))
 				setTimeout(removeClass, 200, cases[i])
 			}
 		// in progress
@@ -146,12 +146,12 @@ if (value == 'cpu') {
 				if (checkAll("data-pvp")) {
 					console.log("win/loose/tie")
 				}
+				localStorage.setItem('game', JSON.stringify(object))
+				playInt++
 			} else {
 				cases[i].classList.add("error")
 			}
-			localStorage.setItem('game', JSON.stringify(object))
 			setTimeout(removeClass, 200, cases[i])
-			playInt++
 		}
 	}
 	

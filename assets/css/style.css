@@ -151,6 +151,11 @@ main {
   gap: 3vh;
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 1024px) {
   main {
     width: 40%;
@@ -265,8 +270,8 @@ main.game section#game-plate div.case {
   cursor: pointer;
 }
 main.game section#game-plate div.case span.cross, main.game section#game-plate div.case span.cross::before {
-  width: 70px;
-  height: 20px;
+  width: 13vw;
+  height: 4vw;
   background: #58E0E9;
   border-radius: 2px;
   display: flex;
@@ -284,11 +289,11 @@ main.game section#game-plate div.case span.cross::before {
   transform: rotate(-90deg);
 }
 main.game section#game-plate div.case span.circle {
-  width: 70px;
-  height: 70px;
+  width: 12vw;
+  height: 12vw;
   border-radius: 100px;
   background: transparent;
-  border: 20px solid #E5B842;
+  border: 3.5vw solid #E5B842;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -313,13 +318,18 @@ main.game section:nth-child(2) {
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main.game section#game-plate {
     gap: 2rem;
   }
   main.game section#game-plate div.case span.cross, main.game section#game-plate div.case span.cross::before {
     width: 6vw;
     height: 1.7vw;
+  }
+  main.game section#game-plate div.case span.circle {
+    width: 6vw;
+    height: 6vw;
+    border: 1.75vw solid #E5B842;
   }
 }
 @keyframes error {
@@ -469,6 +479,11 @@ header h1 span:nth-child(2)::first-letter {
   color: #58E0E9;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 1024px) {
   header {
     width: 40%;

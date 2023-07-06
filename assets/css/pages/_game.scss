@@ -20,8 +20,8 @@ main.game {
 				cursor: pointer;
 				
 				span.cross, span.cross::before {
-					width: 70px;
-					height: 20px;
+					width: 13vw;
+					height: 4vw;
 					background: $cyan;
 					border-radius: 2px;
 					display: flex;
@@ -42,11 +42,11 @@ main.game {
 				}
 				
 				span.circle {
-					width: 70px;
-					height: 70px;
+					width: 12vw;
+					height: 12vw;
 					border-radius: 100px;
 					background: transparent;
-					border: 20px solid $orange;
+					border: 3.5vw solid $orange;
 					transition: $transition-a-3;
 					position: relative;
 				}
@@ -80,7 +80,7 @@ main.game {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	main.game {
 	
 		section {
@@ -93,6 +93,12 @@ main.game {
 					span.cross, span.cross::before {
 						width: 6vw;
 						height: 1.7vw;
+					}
+					
+					span.circle {
+						width: 6vw;
+						height: 6vw;
+						border: 1.75vw solid $orange; 
 					}
 				} 
 			}

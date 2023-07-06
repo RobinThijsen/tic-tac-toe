@@ -1,6 +1,12 @@
 const data = JSON.parse(localStorage.getItem('data'))
 let userName = localStorage.getItem('userName')
-
+/**
+ *
+ * generate a random num between min and max
+ * @param {number} min
+ * @param {number} max
+ * @return {number} random
+ */
 const random = (min, max) => {
 	return Math.floor((Math.random() * max) + min)
 }
@@ -22,4 +28,3 @@ if (userName == null) {
 		localStorage.setItem('userName', userName)
 	}
 }
-console.log(userName)

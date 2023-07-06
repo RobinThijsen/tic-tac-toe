@@ -1,5 +1,10 @@
 const gameView = document.getElementById("game-plate")
 
+/**
+ * Create a new case
+ * @param {HTMLElement} gameView containers of all cases
+ *
+ */
 const addCases = (gameView) => {
 	// add game plate to html
 	for (let i = 0; i < 9; i++) {
@@ -8,8 +13,8 @@ const addCases = (gameView) => {
 		gameView.append(div)
 	}
 }
-
 addCases(gameView)
+
 const cases = gameView.children
 const reset = document.getElementById("reset")
 let playerMark = localStorage.getItem('player-marks')
@@ -31,9 +36,8 @@ let object
 /**
  *
  * Create a mark specified and add it to the case clicked
- *
- * @param {cases} case clicked
- * @param {markClass} type of mark
+ * @param {HTMLElement} cases element clicked
+ * @param {string} markClass type of mark
  *
  */
 const addMarks = (cases, markClass) => {
@@ -45,7 +49,7 @@ const addMarks = (cases, markClass) => {
 /**
  *
  * change class of marks for win
- * @param {cases} cases to change class
+ * @param {HTMLCollection} cases to change class
  *
  */
 const changeMarks = (cases) => {
@@ -74,10 +78,10 @@ console.table(object)
 /**
  *
  * function to check if player is closed to win
- * @param {object} the JSON game plate version to store in localStorage
- * @param {cases} an htmlcolletion of the cases
- * @param {marks} marks of the player
- * @param {other} marks of the CPU
+ * @param {json} object the JSON game plate version to store in localStorage
+ * @param {HTMLCollection} cases an htmlcolletion of the cases
+ * @param {string} marks of the player
+ * @param {string} other of the CPU
  *
  */
 const checkIfCloseWin = (object, cases, marks, other) => {
@@ -288,8 +292,8 @@ const checkIfCloseWin = (object, cases, marks, other) => {
 /**
  *
  * win condition
- * @param {cases} arr of cases of gameplate
- * @param {marks} marks to check
+ * @param {HTMLCollection} cases arr of cases of gameplate
+ * @param {string} marks to check
  * @return {boolean} true if marks win, false if not
  *
  */
@@ -414,9 +418,9 @@ const checkIfWin = (cases, marks) => {
 /**
  *
  * tie condition
- * @param {object} arr of game plate 
- *
+ * @param {HTMLCollection} object arr of game plate 
  * @return {boolean} true if tie, false if not
+ *
  */
 const checkIfTie = (object) => {
 	for (let o of object) {
@@ -428,8 +432,9 @@ const checkIfTie = (object) => {
 /**
  *
  * add section in html if win loose or tie
- * @param {text} text of win
- *
+ * @param {string} text of end game
+ * @param {string} playerMark mark of player
+ * @param {string} other mark of CPU
  *
  */
 const addSectionEnd = (text, playerMark, other) => {
@@ -525,17 +530,25 @@ for (let i = 0; i < cases.length; i++) {
 	}
 }
 
-// reset button
+/** 
+ * reset the game plate
+ */
 reset.onclick = () => {
 	localStorage.removeItem('game')
 	location.reload()
 }
 
+/** 
+ * quit the game plate
+ */
 quitButton.onclick = () => {
 	localStorage.removeItem('game')
 	window.location.href = "/index.html"
 }
 
+/** 
+ * next game
+ */
 nextButton.onclick = () => {
 	localStorage.removeItem('game')
 	location.reload()

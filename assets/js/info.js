@@ -13,6 +13,13 @@ userNameInput.value = userNameLocal
 const changeButton = document.getElementById("change")
 const deleteButton = document.getElementById("delete")
 
+/**
+ *
+ * generate a random num between min and max
+ * @param {number} min
+ * @param {number} max
+ * @return {number} random
+ */
 const random = (min, max) => {
 	return Math.floor((Math.random() * max) + min)
 }
@@ -30,10 +37,16 @@ paras[2].innerText = "loose vs cpu : "
 em3.innerText = data.loose
 paras[2].append(em3)
 
+/**
+ * Change user name
+ */
 changeButton.onclick = () => {
 	localStorage.setItem('userName', userNameInput.value)
 }
 
+/**
+ * reset user data
+ */
 deleteButton.onclick = () => {
 	data.win = 0
 	data.tie = 0

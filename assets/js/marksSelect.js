@@ -13,6 +13,9 @@ if (local != null) {
 	localStorage.setItem('player-marks', 'cross')
 }
 
+/**
+ * select cross for player
+ */
 cross.onclick = () => {
 	indicator.classList.remove("active")
 	cross.children[0].classList.remove("active")
@@ -20,6 +23,9 @@ cross.onclick = () => {
 	localStorage.setItem('player-marks', 'cross')
 }
 
+/**
+ * select circle for player
+ */
 circle.onclick = () => {
 	indicator.classList.add("active")
 	cross.children[0].classList.add("active")

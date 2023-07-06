@@ -151,7 +151,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   main {
-    width: 60%;
+    width: 40%;
   }
 }
 main.home section {
@@ -191,7 +191,7 @@ main.home section:first-child > div div.indicator {
   transition: all 0.3s ease;
 }
 main.home section:first-child > div div.indicator.active {
-  left: 55%;
+  left: 54%;
 }
 main.home section:first-child > div div.marks-container {
   width: 50%;
@@ -300,12 +300,49 @@ main.game section#game-plate div.case.active span.cross, main.game section#game-
 main.game section#game-plate div.case.active span.circle {
   border-color: hsl(197, 57%, 14%);
 }
+main.game section#game-plate div.case.error {
+  animation-name: error;
+  animation-iteration-count: 1;
+  animation-duration: 0.2s;
+}
 main.game section:nth-child(2) {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
+@media screen and (min-width: 1024px) {
+  main.game section#game-plate {
+    gap: 2rem;
+  }
+}
+@keyframes error {
+  0% {
+    transform: translateX(-5px);
+    background: #ee4444;
+    box-shadow: 0 5px 0 #c73838;
+  }
+  25% {
+    transform: translateX(5px);
+    background: #ee4444;
+    box-shadow: 0 5px 0 #c73838;
+  }
+  50% {
+    transform: translateX(-5px);
+    background: #ee4444;
+    box-shadow: 0 5px 0 #c73838;
+  }
+  75% {
+    transform: translateX(5px);
+    background: #ee4444;
+    box-shadow: 0 5px 0 #c73838;
+  }
+  100% {
+    transform: translateX(0px);
+    background: #ee4444;
+    box-shadow: 0 5px 0 #c73838;
+  }
+}
 main.info section {
   width: 100%;
   display: flex;
@@ -331,24 +368,28 @@ main.info section article h1 {
   font-weight: 700;
   font-size: 1.3rem;
 }
-main.info section article div.stats {
+main.info section article h2 {
+  font-size: 1.15rem;
+  color: #E5B842;
+}
+main.info section article div.stats-cpu, main.info section article div.stats-pvp {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1vh;
 }
-main.info section article div.stats p {
+main.info section article div.stats-cpu p, main.info section article div.stats-pvp p {
   color: #C1C1C1;
   text-transform: uppercase;
   font-weight: 500;
 }
-main.info section article div.stats p:nth-child(1) em {
+main.info section article div.stats-cpu p:nth-child(1) em, main.info section article div.stats-pvp p:nth-child(1) em {
   color: #58E0E9;
 }
-main.info section article div.stats p:nth-child(2) em {
+main.info section article div.stats-cpu p:nth-child(2) em, main.info section article div.stats-pvp p:nth-child(2) em {
   color: #C1C1C1;
 }
-main.info section article div.stats p:nth-child(3) em {
+main.info section article div.stats-cpu p:nth-child(3) em, main.info section article div.stats-pvp p:nth-child(3) em {
   color: #E5B842;
 }
 main.info section article input {
@@ -422,6 +463,11 @@ header h1 span:nth-child(2)::first-letter {
   color: #58E0E9;
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    width: 40%;
+  }
+}
 a.blue-button {
   padding: 1em 2em;
   border-radius: 5px;
@@ -431,6 +477,17 @@ a.blue-button {
   transition: all 0.3s ease;
   text-transform: uppercase;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+a.blue-button i {
+  font-size: 1.2rem;
+}
+a.blue-button.not-active {
+  background: #C1C1C1;
+  box-shadow: 0 10px 0 #929292;
 }
 a.blue-button:active {
   box-shadow: none;
@@ -440,12 +497,19 @@ a.blue-button:active {
 a.orange-button {
   padding: 1em 2em;
   border-radius: 5px;
-  background: #C1C1C1;
+  background: #E5B842;
   color: hsl(197, 57%, 14%);
-  box-shadow: 0 10px 0 #929292;
+  box-shadow: 0 10px 0 #d1ab44;
   transition: all 0.3s ease;
   text-transform: uppercase;
   font-weight: 900;
+}
+a.orange-button.not-active {
+  background: #C1C1C1;
+  box-shadow: 0 10px 0 #929292;
+}
+a.orange-button.none {
+  transform: translateX(90vw);
 }
 a.orange-button:active {
   box-shadow: none;

@@ -40,3 +40,9 @@ header {
 		}
 	}
 }
+
+@media screen and (min-width: 1024px) {
+	header {
+		width: 40%;
+	}
+}

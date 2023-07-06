@@ -1,4 +1,4 @@
-const data = JSON.parse(localStorage.getItem('data'))
+const data = JSON.parse(localStorage.getItem('data-cpu'))
 let userName = localStorage.getItem('userName')
 /**
  *
@@ -17,14 +17,15 @@ if (data == null) {
 		tie: 0,
 		loose: 0
 	}
-	localStorage.setItem('data', JSON.stringify(stats))
+	localStorage.setItem('data-cpu', JSON.stringify(stats))
+	localStorage.setItem('data-pvp', JSON.stringify(stats))
 }
 
 if (userName == null) {
 	userName = "GUEST_"
 	
 	for (let i = 0; i < 8; i++) {
-		userName += random(1, 10)
+		userName += random(0, 9)
 		localStorage.setItem('userName', userName)
 	}
 }

@@ -26,7 +26,12 @@ main.info {
 				font-size: 1.3rem;
 			}
 			
-			div.stats {
+			h2 {
+				font-size: 1.15rem;
+				color: $orange;
+			}
+			
+			div.stats-cpu, div.stats-pvp {
 				display: flex;
 				flex-direction: column;
 				align-items: center;

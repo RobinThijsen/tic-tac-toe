@@ -63,6 +63,12 @@ main.game {
 						border-color: $darkest-blue-green;
 					}
 				}
+				
+				&.error {
+					animation-name: error;
+					animation-iteration-count: 1;
+					animation-duration: .2s;
+				}
 			}
 		}
 		
@@ -71,5 +77,45 @@ main.game {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	main.game {
+	
+		section {
+			
+			&#game-plate {
+				gap: 2rem;
+			}
+		}
+	}
+}
+
+@keyframes error {
+	0% {
+		transform: translateX(-5px);
+		background: $red;
+		box-shadow: 0 5px 0 $dark-red;
+	}
+	25% {
+		transform: translateX(5px);
+		background: $red;
+		box-shadow: 0 5px 0 $dark-red;
+	}
+	50% {
+		transform: translateX(-5px);
+		background: $red;
+		box-shadow: 0 5px 0 $dark-red;
+	}
+	75% {
+		transform: translateX(5px);
+		background: $red;
+		box-shadow: 0 5px 0 $dark-red;
+	}
+	100% {
+		transform: translateX(0px);
+		background: $red;
+		box-shadow: 0 5px 0 $dark-red;
 	}
 }

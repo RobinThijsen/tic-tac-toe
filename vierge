@@ -1,0 +1,250 @@
+/* CHECK FIRST CASE POSSIBILITY */
+// check if marks = 
+//
+//   X | X |   
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//     |   |     
+//
+if (object.game[0] == marks && object.game[1] == marks && object.game[2] != other) {
+	object.game[2] = other
+	addMarks(cases[2], other)
+	
+// check if marks = 
+//
+//   X |   | X 
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//     |   |     
+//
+} else if (object.game[0] == marks && object.game[2] == marks && object.game[1] != other) {
+	object.game[1] = other
+	addMarks(cases[1], other)
+	
+// check if marks = 
+//
+//     | X | X   
+// ____|___|____
+//     |   |   
+// –––-|–––|––––
+//     |   |   
+//
+} else if (object.game[1] == marks && object.game[2] == marks && object.game[0] != other) {
+	object.game[8] = other
+	addMarks(cases[8], other)
+
+// check if marks = 
+//
+//   X |   |     
+// ____|___|____
+//   X |   |   
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[0] == marks && object.game[3] == marks && object.game[6] != other) {
+	object.game[6] = other
+	addMarks(cases[6], other)
+
+// check if marks = 
+//
+//   X |   |     
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//   X |   |   
+//
+} else if (object.game[0] == marks && object.game[6] == marks && object.game[3] != other) {
+	object.game[3] = other
+	addMarks(cases[3], other)
+	
+// check if marks = 
+//
+//   X |   |     
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[0] == marks && object.game[4] == marks && object.game[8] != other) {
+	object.game[0] = other
+	addMarks(cases[0], other)
+
+// check if marks = 
+//
+//     | X |     
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[1] == marks && object.game[4] == marks && object.game[7] != other) {
+	object.game[7] = other
+	addMarks(cases[7], other)
+	
+// check if marks = 
+//
+//     | X |     
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//     | X |   
+//
+} else if (object.game[1] == marks && object.game[7] == marks && object.game[4] != other) {
+	object.game[4] = other
+	addMarks(cases[4], other)
+
+/* CHECK THIRD CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   | X   
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[2] == marks && object.game[4] == marks && object.game[6] != other) {
+	object.game[6] = other
+	addMarks(cases[6], other)
+
+// check if marks = 
+//
+//     |   | X   
+// ____|___|____
+//     |   | X 
+// ––––|–––|–-––
+//     |   |   
+//
+} else if (object.game[2] == marks && object.game[5] == marks && object.game[8] != other) {
+	object.game[8] = other
+	addMarks(cases[8], other)
+/* CHECK FOURTH CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//   X | X |   
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[3] == marks && object.game[4] == marks && object.game[5] != other) {
+	object.game[5] = other
+	addMarks(cases[5], other)
+
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//   X |   |   
+// ––––|–––|––––
+//   X |   |   
+//
+} else if (object.game[3] == marks && object.game[6] == marks && object.game[0] != other) {
+	object.game[0] = other
+	addMarks(cases[0], other)
+/* CHECK FITFTH CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     | X | X 
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[4] == marks && object.game[5] == marks && object.game[3] != other) {
+	object.game[3] = other
+	addMarks(cases[3], other)
+
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//   X |   | X 
+// ––––|–––|––––
+//     |   |   
+//
+} else if (object.game[3] == marks && object.game[5] == marks && object.game[4] != other) {
+	object.game[4] = other
+	addMarks(cases[4], other)
+	
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//     | X |   
+//
+} else if (object.game[4] == marks && object.game[7] == marks && object.game[1] != other) {
+	object.game[1] = other
+	addMarks(cases[1], other)
+
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//     |   | X 
+//
+} else if (object.game[4] == marks && object.game[8] == marks && object.game[0] != other) {
+	object.game[0] = other
+	addMarks(cases[0], other)
+/* CHECK SIXTH CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     |   | X 
+// ––––|–––|––––
+//     |   | X 
+//
+} else if (object.game[5] == marks && object.game[8] == marks && object.game[2] != other) {
+	object.game[2] = other
+	addMarks(cases[2], other)
+/* CHECK SEVETH CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     | X |   
+// ––––|–––|––––
+//  X  |   |   
+//
+} else if (object.game[4] == marks && object.game[6] == marks && object.game[2] != other) {
+	object.game[2] = other
+	addMarks(cases[2], other)
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//  X  | X |   
+//
+} else if (object.game[6] == marks && object.game[7] == marks && object.game[8] != other) {
+	object.game[8] = other
+	addMarks(cases[8], other)
+/* CHECK EIGTH CASE POSSIBILITY */
+// check if marks = 
+//
+//     |   |     
+// ____|___|____
+//     |   |   
+// ––––|–––|––––
+//     | X | X 
+//
+} else if (object.game[7] == marks && object.game[8] == marks && object.game[6] != other) {
+	object.game[6] = other
+	addMarks(cases[6], other)
+	
+} else {
+	for (let i = 0; i < cases.length; i++) {
+		if (object.game[i] == false) {
+			object.game[i] = other
+			addMarks(cases[i], other)
+			break
+		}
+	}
+}

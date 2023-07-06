@@ -7,6 +7,19 @@ a.blue-button {
 	transition: $transition-a-3;
 	text-transform: uppercase;
 	font-weight: 900;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	
+	i {
+		font-size: 1.2rem;
+	}
+	
+	&.not-active {
+		background: $gray;
+		box-shadow: 0 10px 0 $dark-gray;
+	}
 	
 	&:active {
 		box-shadow: none;
